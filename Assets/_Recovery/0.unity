@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &187359186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 748774490410905711, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
+  m_PrefabInstance: {fileID: 1927795281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2b27669c14f4c4dad8849ac27a624e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,17 +424,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2083703041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &526473595 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 748774490410905711, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
-  m_PrefabInstance: {fileID: 1823943455}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2b27669c14f4c4dad8849ac27a624e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
 --- !u!1 &773803386
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +433,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 773803387}
-  - component: {fileID: 773803388}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -457,31 +456,6 @@ Transform:
   - {fileID: 2083703041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &773803388
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773803386}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1.02, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,10 +1080,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7364268351841460450, guid: f93e93c5575faa54f95d986758e9e535, type: 3}
-      propertyPath: characterController
-      value: 
-      objectReference: {fileID: 773803388}
     - target: {fileID: 7429003446609538977, guid: f93e93c5575faa54f95d986758e9e535, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -1264,7 +1234,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1401186264751022614, guid: f93e93c5575faa54f95d986758e9e535, type: 3}
-    - {fileID: 8415934620133080445, guid: f93e93c5575faa54f95d986758e9e535, type: 3}
     m_RemovedGameObjects:
     - {fileID: 895389033346589988, guid: f93e93c5575faa54f95d986758e9e535, type: 3}
     m_AddedGameObjects:
@@ -1658,8 +1627,8 @@ MonoBehaviour:
   spawnerScript: {fileID: 1155390886}
   navmeshGeneratorScript: {fileID: 1155390889}
   enemyCount: 5
-  enemySpawner: {fileID: 526473595}
---- !u!1001 &1823943455
+  enemySpawner: {fileID: 187359186}
+--- !u!1001 &1927795281
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1677,7 +1646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8958178992155683633, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 29.6
       objectReference: {fileID: 0}
     - target: {fileID: 8958178992155683633, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1685,7 +1654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8958178992155683633, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 30.1
       objectReference: {fileID: 0}
     - target: {fileID: 8958178992155683633, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1756,4 +1725,4 @@ SceneRoots:
   - {fileID: 1778892415}
   - {fileID: 1781133963}
   - {fileID: 773803387}
-  - {fileID: 1823943455}
+  - {fileID: 1927795281}

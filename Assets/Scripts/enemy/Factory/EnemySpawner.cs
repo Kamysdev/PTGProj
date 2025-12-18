@@ -15,19 +15,13 @@ public class EnemySpawner : MonoBehaviour
         enemy.Player = player;
 
         Vector3 direction = new Vector3(Random.insideUnitCircle.x, 0, Random.insideUnitCircle.y);
-        direction = direction.normalized * Random.Range(3, 6);
+        direction = direction.normalized * Random.Range(20, 20);
         Vector3 position = transform.position + direction;
 
         enemy.positionAndRotation(position, Quaternion.identity);
         Health enemyHP = enemy.EnemyHP;
         //enemyHP.spawnOnDeath.AddListener(_ => GetComponent<ItemSpawner>().spawnRandomItems());
     }
-
-    // private void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Space))
-    //         spawnEnemy();
-    // }
 
     private void OnSpawn()
     {
