@@ -4,10 +4,12 @@ using UnityEngine;
 public class ScoreItem : MonoBehaviour, IItem
 {
     [SerializeField] private int scoreAmount = 10;
+    [SerializeField] private GameObject obj;
+
     public void Use(Collider player)
     {
-        var score = player.GetComponent<PlayerScore>();
-        if (score != null) score.AddScore(scoreAmount);
+        var score = FindFirstObjectByType<ScoreUI>();
+        score.UpdateScore(scoreAmount);
     }
 
     public string GetName()
@@ -24,5 +26,10 @@ public class ScoreItem : MonoBehaviour, IItem
             Use(other);
             Destroy(gameObject);
         }
+    }
+
+    public void SpawnItem(Vector3 pos)
+    {
+        Instantiate(obj, pos, Quaternion.identity);
     }
 }

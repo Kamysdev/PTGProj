@@ -4,8 +4,10 @@ public class RangedEnemy : AbstractEnemy
 {
     [Range(2, 50)]
     public float shootRange = 10;
-    public GameObject projectilePrefab;
-    public Transform shootPoint;
+
+    // для стрельбы
+    //public GameObject projectilePrefab;
+    //public Transform shootPoint;
     public float shootCooldown = 1.5f;
 
     float lastShootTime;

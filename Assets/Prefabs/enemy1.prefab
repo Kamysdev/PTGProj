@@ -108,12 +108,12 @@ GameObject:
   - component: {fileID: 4884497942934839702}
   - component: {fileID: 7408296468269702407}
   - component: {fileID: 3865529451799432578}
-  - component: {fileID: 5329707920601699841}
+  - component: {fileID: -4362737664444864146}
   - component: {fileID: 4161604648411142919}
   - component: {fileID: 5240713644810158063}
-  - component: {fileID: 3719652934925372814}
+  - component: {fileID: -5777356405340931350}
   m_Layer: 3
-  m_Name: SlimePBR
+  m_Name: enemy1
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &5329707920601699841
+--- !u!114 &-4362737664444864146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,15 +212,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4799929418954296714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f619155249809b4095ed182e8485354, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e1960ef403d143f88d7dd587501ae4f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemy
+  m_EditorClassIdentifier: Assembly-CSharp::RangedEnemy
   enemyHP: {fileID: 4161604648411142919}
   updatesPerSeconds: 10
   rotationSpeed: 120
   enemyScore: 100
-  attackRange: 2
-  damage: 5
+  shootRange: 10
+  shootCooldown: 1.5
 --- !u!114 &4161604648411142919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   spawnOnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3719652934925372814}
+      - m_Target: {fileID: -5777356405340931350}
         m_TargetAssemblyTypeName: ScoreItem, Assembly-CSharp
         m_MethodName: SpawnItem
         m_Mode: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5329707920601699841}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MeleeEnemy, Assembly-CSharp
         m_MethodName: death
         m_Mode: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
   onHitTaken:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5329707920601699841}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MeleeEnemy, Assembly-CSharp
         m_MethodName: stunBegin
         m_Mode: 1
@@ -310,7 +310,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3719652934925372814
+--- !u!114 &-5777356405340931350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

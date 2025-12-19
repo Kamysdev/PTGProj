@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerScore
+public class PlayerScore : MonoBehaviour
 {
     private int score = 0;
 
