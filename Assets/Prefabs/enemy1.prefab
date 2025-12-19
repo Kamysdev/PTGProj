@@ -256,8 +256,8 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MeleeEnemy, Assembly-CSharp
+      - m_Target: {fileID: -4362737664444864146}
+        m_TargetAssemblyTypeName: RangedEnemy, Assembly-CSharp
         m_MethodName: death
         m_Mode: 1
         m_Arguments:
@@ -271,8 +271,8 @@ MonoBehaviour:
   onHitTaken:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MeleeEnemy, Assembly-CSharp
+      - m_Target: {fileID: -4362737664444864146}
+        m_TargetAssemblyTypeName: RangedEnemy, Assembly-CSharp
         m_MethodName: stunBegin
         m_Mode: 1
         m_Arguments:
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0d263c1d63446d8bb777c766479850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreItem
-  scoreAmount: 10
+  scoreAmount: 30
   obj: {fileID: 4848917473270904102, guid: 1404955be87e040da84cfd9efa50b18f, type: 3}
 --- !u!1 &4800354591862124342
 GameObject:

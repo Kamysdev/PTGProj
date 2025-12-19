@@ -4133,6 +4133,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 773803387}
+    - target: {fileID: 748774490410905711, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
+      propertyPath: enemyFactories.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 748774490410905711, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
+      propertyPath: 'enemyFactories.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4795171317812601061, guid: 0649290b550a24b979e2a515c1a69c07, type: 3}
     - target: {fileID: 1847819590287160369, guid: 0c260c1095143d24eb3cf421f56191f0, type: 3}
       propertyPath: m_Name
       value: EmenySpawner
